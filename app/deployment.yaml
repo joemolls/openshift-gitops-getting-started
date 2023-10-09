@@ -45,9 +45,9 @@ spec:
           failureThreshold: 1
           httpGet:
             path: /
-            port: 8080
+            port: 8081
             scheme: HTTP
           initialDelaySeconds: 5
-          periodSeconds: 10
+          periodSeconds: 5
           successThreshold: 1
           timeoutSeconds: 5
