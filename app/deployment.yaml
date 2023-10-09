@@ -35,17 +35,17 @@ spec:
           successThreshold: 1
           timeoutSeconds: 1
         ports:
-        - containerPort: 8080
+        - containerPort: 8087
           protocol: TCP
-        - containerPort: 8443
+        - containerPort: 8447
           protocol: TCP
-        - containerPort: 8778
+        - containerPort: 8777
           protocol: TCP
         readinessProbe:
           failureThreshold: 3
           httpGet:
             path: /
-            port: 8080
+            port: 8087
             scheme: HTTP
           initialDelaySeconds: 45
           periodSeconds: 10
