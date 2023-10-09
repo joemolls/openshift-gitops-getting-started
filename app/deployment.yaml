@@ -25,13 +25,13 @@ spec:
         imagePullPolicy: Always
         image: quay.io/service-binding/spring-petclinic:latest
         livenessProbe:
-          failureThreshold: 1
+          failureThreshold: 3
           httpGet:
             path: /
             port: 8080
             scheme: HTTP
-          initialDelaySeconds: 5
-          periodSeconds: 1
+          initialDelaySeconds: 45
+          periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 1
         ports:
@@ -42,12 +42,12 @@ spec:
         - containerPort: 8778
           protocol: TCP
         readinessProbe:
-          failureThreshold: 1
+          failureThreshold: 3
           httpGet:
             path: /
             port: 8080
             scheme: HTTP
-          initialDelaySeconds: 5
-          periodSeconds: 5
+          initialDelaySeconds: 45
+          periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 5
